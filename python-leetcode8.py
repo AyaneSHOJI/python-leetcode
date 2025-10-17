@@ -21,6 +21,12 @@ class Solution(object):
         
         # iterate through the string and find the index of first unique character
         for index, char in enumerate(s):
+        # the equivalent of "enumarate" in C# can be done like this:
+        # static void Main(string[] args) {
+        #     List<int> list = new List<int> {4, 2, 3, 1, 8};
+        #     foreach (var it in list.Select((Value, Index) => new {Value, Index})) {
+        #         Console.WriteLine("{0}: {1}", it.Index, it.Value); 
+        #     }
             if char_count[char] == 1:
                 return index    
         return -1
