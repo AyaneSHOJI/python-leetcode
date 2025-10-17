@@ -31,6 +31,13 @@ class Solution(object):
                 return index    
         return -1
         
+        # another solution in Python 
+        #   count = collections.Counter(s)
+        #   for i, c in enumerate(s):
+        #       if count[c] == 1:
+        #           return i
+        #   return -1
+
 # test cases
 sol = Solution()
 result = sol.firstUniqChar("leetcode")
