@@ -1,4 +1,4 @@
-print("Leetcode 10: ")
+print("Leetcode 10: Search Insert Position")
 
 class Solution(object):
     def searchInsert(self, nums, target):
