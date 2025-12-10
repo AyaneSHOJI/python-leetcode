@@ -1,4 +1,4 @@
-print("Leetcode 11: ")
+print("Leetcode 11: Move Zeroes")
 
 class Solution(object):
     def moveZeroes(self, nums):
