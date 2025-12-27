@@ -1,31 +1,25 @@
-print("Leetcode 11: Move Zeroes")
+print("Leetcode 11: Number of Good Pairs")
 
 class Solution(object):
-    def moveZeroes(self, nums):
-        
-        # this is my solution, enumerate jumps always index that does not work
-        # moreover, this solution has O(n²) time complexity + extra space (temp) – O(n) space.
-        #
-        # for index, number in enumerate(nums):
-        #     if(number == 0):
-        #         nums.pop(index)
-        #         nums.append(0)
+    def numIdenticalPairs(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
 
-        # non zero pointer
-        non_zero_index = 0
+        result = 0
+
+        for i in range(0, len(nums)-1):
+            for j in range(i+1, len(nums)):
+                if(nums[i] == nums[j]):
+                    result += 1
+
         
-        # iterate through all elements
-        for i in range(len(nums)):
-            if nums[i] != 0:
-                # switch if necessary
-                nums[non_zero_index], nums[i] = nums[i], nums[non_zero_index]
-                non_zero_index += 1
-        
-        return nums
+        return result
 
 # test cases 
 sol = Solution()
-nums = [0,0,1]
-result = sol.moveZeroes(nums)
-print(result) # should return [1,0,0]
+nums = [1,2,3,1,1,3]
+result = sol.numIdenticalPairs(nums)
+print(result) # should return 4
 
